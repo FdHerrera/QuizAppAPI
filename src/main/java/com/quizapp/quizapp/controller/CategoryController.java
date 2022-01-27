@@ -31,7 +31,7 @@ public class CategoryController {
     }
 
     @GetMapping(path = "/{categoryId}")
-    public ResponseEntity<List<QuestionResponse>> getQuestionsByCategoryId(@PathVariable('categoryId') Long categoryId){
+    public ResponseEntity<List<QuestionResponse>> getQuestionsByCategoryId(@PathVariable("categoryId") Long categoryId){
         List<QuestionResponse> response = questionService.getQuestionsByCategory(categoryId);
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
